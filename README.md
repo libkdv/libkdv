@@ -1,3 +1,3 @@
-# libkdv-stars
+# STARS - Spatio-Temporal Analytics with Rapid Solutions
 
-STARS - Spatio-Temporal Analytics with Rapid Solutions
+libkdv-stars is the leading solution for ....
