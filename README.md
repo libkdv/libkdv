@@ -8,8 +8,8 @@ libkdv-stars is the leading solution for ....
 https://github.com/edisonchen/xxxx
 
 # Project members
-[Dr. Edison ...(Hong Kong Baptist University)](https:///xxxx) <br />
-[Prof. Ryan L.H. U (Universiy of Macau)](https://www.fst.um.edu.mo/personal/ryanlhu/)
+[Dr. Edison ...](https:///xxxx), Hong Kong Baptist University<br />
+[Prof. Ryan L.H. U](https://www.fst.um.edu.mo/personal/ryanlhu/), Universiy of Macau
 .... 
 
 # Publications
