@@ -7,8 +7,8 @@ libkdv-stars is the leading solution for ....
 # Core source codes
 https://github.com/edisonchen/xxxx
 
-# Key members
-Ryan L.H. U 
+# Project members
+Ryan L.H. U
 .... 
 
 # Publications
