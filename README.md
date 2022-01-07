@@ -1,11 +1,14 @@
-# STARS - Spatio-Temporal Analytics with Rapid Solutions
+# LIBKDV - A Versatile Kernel Density Visualization Library for Geospatial Analytics
 
-libkdv-stars is the leading solution for ....
+LIBKDV is the first versatile library ... 
+(TBA)
 
 <img width="849" alt="03e58de5950a5d503b73952e8a3bbd1" src="https://user-images.githubusercontent.com/96175669/146165826-eef5f116-3e37-4bec-91dc-899af61fed18.png">
 
+# How to use
+
 # Core source codes
-https://github.com/edisonchen/xxxx
+
 
 # Project members
 [Dr. Edison ...](https:///xxxx), Hong Kong Baptist University<br />
