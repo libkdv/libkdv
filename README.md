@@ -4,12 +4,13 @@ Kernel Density Visualization (KDV) has been extensively used for many geospatial
 # Description of LIBKDV:
 To overcome the above issue, we develop the first versatile programming library (LIBKDV), by combining our recent studies (SLAM [1] and SWS [2]), which can reduce the worst-case time complexity for supporting different types of KDV-based geospatial analytics, including:
 
-(1)	Bandwidth-tuning analysis: Domain experts can first set multiple bandwidths in a batch, and then generate multiple KDVs with respect to these bandwidths.
+(1)	Bandwidth-tuning analysis (cf. Figure 1): Domain experts can first set multiple bandwidths in a batch, and then generate multiple KDVs with respect to these bandwidths.
 
 <p align="center"><img width="749" alt="03e58de5950a5d503b73952e8a3bbd1" src="Bandwidth_exploration_figures.png"></p>
 
+(2)	Spatiotemporal analysis (cf. Figure 2): Domain experts can leverage a more complex spatiotemporal kernel density function to generate time-dependent hotspot maps that correspond to different timestamps.
 
-(2)	Spatiotemporal analysis: Domain experts can leverage a more complex spatiotemporal kernel density function to generate time-dependent hotspot maps that correspond to different timestamps.
+<p align="center"><img width="749" alt="03e58de5950a5d503b73952e8a3bbd1" src="time-dependent-hotspot-maps"></p>
 
 To further enhance the efficiency for these two tasks, we fully parallelize our methods, SLAM and SWS.
 
