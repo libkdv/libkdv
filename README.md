@@ -6,6 +6,9 @@ To overcome the above issue, we develop the first versatile programming library 
 
 (1)	Bandwidth-tuning analysis: Domain experts can first set multiple bandwidths in a batch, and then generate multiple KDVs with respect to these bandwidths.
 
+<p align="center"><img width="749" alt="03e58de5950a5d503b73952e8a3bbd1" src="Bandwidth_exploration_figures.png"></p>
+
+
 (2)	Spatiotemporal analysis: Domain experts can leverage a more complex spatiotemporal kernel density function to generate time-dependent hotspot maps that correspond to different timestamps.
 
 To further enhance the efficiency for these two tasks, we fully parallelize our methods, SLAM and SWS.
