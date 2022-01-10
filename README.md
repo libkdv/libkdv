@@ -18,7 +18,29 @@ To further enhance the efficiency for these two tasks, we fully parallelize our 
 
 # Installation Guidelines:
 
-++to do: add details
+1. First,build the virtual environment in the Annaconda
+```
+conda create -n py39 python=3.9
+```
+2. Enter the virtual environment
+```
+conda activate py39
+```
+3. Install the dependencies in the environment
+```
+conda install -c conda-forge geopandas
+pip install keplergl
+pip install libkdv
+```
+4. Try to import libkdv
+```
+import libkdv
+```
+5. Anticipated problems and possible solutions
+> *OSError: could not find or load spatialindex_c-64.dll*
+```
+pip install rtree==0.9.3
+```
 
 # How to Use:
 
