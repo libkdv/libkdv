@@ -104,6 +104,13 @@ for i in range(len(bandwidths_traffic_kdv)):
 map_traffic_kdv_bands
 ```
 
+#Sample datasets:
+We offer three sample datasets for testing, which are (1) Seattle crime dataset [a], (2) New York traffic accident dataset [b], and (3) Ontario COVID-19 dataset [c]. The python code (data_processing.py) and the Jupyter notebook (data_processing.ipynb) for extracting these datasets are provided in this Github link.
+
+[a] Seattle Open Data. https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5.
+[b] NYC Open Data. https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95.
+[c] Ontario Open Data. https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario.
+
 # Advantages:
 There are three main advantages for using our LIBKDV.<br />
 ***Easy-to-use software package:*** Domain experts only need to write a few lines of python codes for using our LIBKDV, which is as easy as using other python packages, including Scikit-learn and Scipy.<br />
@@ -111,6 +118,7 @@ There are three main advantages for using our LIBKDV.<br />
 ***High versatility:*** Due to the high efficiency of LIBKDV, our library can support more KDV-based geospatial analysis tasks, including bandwidth-tuning analysis and spatiotemporal analysis, which cannot be natively and feasibly supported by other software tools.<br />
 
 LIBKDV is superior to those KDV solutions in scientific library, scikit-learn and scipy, in terms of response time and functionality, espeically for high resolution (1k monitor) and large data cardinality (millions objects). As shown in our jupyter notebook example, LIBKDV is XX times faster than scipy and yyy times faster than scikit-learn on our testing workstation.
+
 
 # Project Members:
 [Prof. (Edison) Tsz Nam Chan](https://www.comp.hkbu.edu.hk/~edisonchan/), Hong Kong Baptist University<br />
