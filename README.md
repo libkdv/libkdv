@@ -39,9 +39,10 @@ pip install rtree==0.9.3
 
 # How to Use:
 
-1. Import LIBKDV in your code
+1. Import LIBKDV and Pandas in your code
 ```
 import libkdv
+import pandas as pd
 ```
 
 2. Create the LIBKDV object and compute the heatmap
