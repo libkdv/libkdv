@@ -73,7 +73,7 @@ Example for supporting the bandwidth-tuning analysis task:<br />
 ```
 bandwidths_traffic_kdv = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set the bandwidths
 result_traffic_kdv = [] #Stores the final results
-kdv_traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=0,row_pixels=1280,col_pixels=960,bandwidth_t=10,num_threads=16)
+kdv_traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=0,row_pixels=1280,col_pixels=960,num_threads=16)
 for band in bandwidths_traffic_kdv:
     kdv_traffic_kdv.bandwidth_s = band
     result_traffic_kdv.append(kdv_traffic_kdv.compute())
