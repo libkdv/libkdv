@@ -55,7 +55,7 @@ traffic_kdv.compute()
 *ml: It is a reference latitude (You can set it to be the latitude of the center point of the region). You need to set this variable if g=True.*<br />
 *kt: It is a kernel type.*<br /> 
 *kt=1 means that you call a single KDV (Users can write the for loop to support bandwidth tuning analysis).*<br />
-*kt=3 means that you call the spatiotemporal analysis.*
+*kt=3 means that you call the spatiotemporal analysis.*<br />
 *bs: It is a spatial bandwidth (in terms of meters).*<br />
 *bt: It is a temporal bandwidth (in terms of days). You need to set this variable if kt=3.*<br />
 *rp: It is a number of grids in the x-axis.*<br />
