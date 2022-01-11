@@ -58,7 +58,7 @@ xxxxxx
 
 # Advantages:
 
-Comparing with Scikit-learn and Scipy ...
+LIBKDV is superior to those solutions in scientific library, scikit-learn and scipy, in terms of response time, espeically for high resolution (1k monitor) and large data cardinality (millions objects).
 
 # Project Members:
 [Prof. (Edison) Tsz Nam Chan](https://www.comp.hkbu.edu.hk/~edisonchan/), Hong Kong Baptist University<br />
@@ -71,7 +71,9 @@ Mr. Kaiyan Zhao, Universiy of Macau<br />
 # Collaborators:
 [Prof. Reynold Cheng](https://i.cs.hku.hk/~ckcheng/), The University of Hong Kong<br />
 [Prof. (Ken) Man Lung Yiu](https://www4.comp.polyu.edu.hk/~csmlyiu/), Hong Kong Polytechnic University<br />
-Dr. Zhe Li, Alibaba Cloud
+Dr. Zhe Li, Alibaba Cloud<br />
+Mr. Ye Li, University of Macau<br />
+Mr. Weng Hou Tong, University of Macau
 
 # Publications:
 1. Tsz Nam Chan, Leong Hou U, Byron Choi, Jianliang Xu. SLAM: Efficient Sweep Line Algorithms for Kernel Density Visualization. Proceedings of ACM Conference on Management of Data (SIGMOD), 2022.
