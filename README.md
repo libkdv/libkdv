@@ -54,6 +54,9 @@ xxxxxx
 xxxxxx
 ```
 
+# Advantages:
+
+Comparing with Scikit-learn and Scipy ...
 
 # Project Members:
 [Dr. (Edison) Tsz Nam Chan](https://www.comp.hkbu.edu.hk/~edisonchan/), Hong Kong Baptist University<br />
