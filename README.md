@@ -28,7 +28,7 @@ conda activate libkdv
 ```
 3. Install the dependencies and the library
 ``` 
-conda install -c conda-forge geopandas keplergl
+conda install -c conda-forge geopandas keplergl notebook
 pip install libkdv
 ```
 4. Anticipated problem(s) and possible solution(s)
