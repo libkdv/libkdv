@@ -85,7 +85,7 @@ traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=1
 traffic_kdv.compute()
 ```
 
-3. Illustrate the heatmap by [KerplerGL](https://kepler.gl/)
+3. Show the heatmaps by [KerplerGL](https://kepler.gl/)
 
 To generate a single KDV or support the spatiotemporal analysis task, you can use the following code.
 ```
