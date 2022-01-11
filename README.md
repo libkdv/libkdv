@@ -44,7 +44,12 @@ pip install rtree==0.9.3
 import libkdv
 ```
 
-2. Create the libkdv object
+2. Create the libkdv object and compute the heatmap
+```
+xxxxxx
+```
+
+3. Illustrate the heatmap by [KerplerGL](https://kepler.gl/)
 ```
 xxxxxx
 ```
