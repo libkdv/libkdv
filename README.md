@@ -20,11 +20,11 @@ To further enhance the efficiency for these two tasks, we fully parallelize our 
 
 1. First,build the virtual environment in the Annaconda
 ```
-conda create -n py39 python=3.9
+conda create -n libkdv python=3.9
 ```
 2. Enter the virtual environment
 ```
-conda activate py39
+conda activate libkdv
 ```
 3. Install the dependencies in the environment
 ```
