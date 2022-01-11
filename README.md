@@ -51,13 +51,13 @@ traffic_kdv = kdv(dataset,GPS=g,middle_lat=ml,KDV_type=kt,bandwidth_s=bs,bandwid
 traffic_kdv.compute()
 ```
 > *dataset: It is a pandas table object which stores the dataset.*<br />
-*g: It is a boolean value (true/false) which denotes whether we are using the location data (In our demo, g=True)*<br />
-*ml: It is a reference latitude (We can set it to be the latitude of the center point of the region). We need to set this variable if g=True.*<br />
+*g: It is a boolean value (true/false) which denotes whether you are using the location data (In our demo, g=True)*<br />
+*ml: It is a reference latitude (You can set it to be the latitude of the center point of the region). You need to set this variable if g=True.*<br />
 *kt: It is a kernel type.*<br /> 
 *kt=1 means that you call a single KDV (Users can write the for loop to support bandwidth tuning analysis).*<br />
 *kt=3 means that you call the spatiotemporal analysis.*
 *bs: It is a spatial bandwidth (in terms of meters).*<br />
-*bt: It is a temporal bandwidth (in terms of days). We need to set this variable if kt=3.*<br />
+*bt: It is a temporal bandwidth (in terms of days). You need to set this variable if kt=3.*<br />
 *rp: It is a number of grids in the x-axis.*<br />
 *cp: It is a number of grids in the y-axis.*<br />
 *tp: It is a number of grids in the t-axis.*<br />
