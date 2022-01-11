@@ -46,8 +46,10 @@ import libkdv
 
 2. Create the libkdv object and compute the heatmap
 ```
-xxxxxx
+ny_kdv = kdv(xx,yy,zz,...)
+ny_kdv.compute()
 ```
+> *xx: it is ...*
 
 3. Illustrate the heatmap by [KerplerGL](https://kepler.gl/)
 ```
