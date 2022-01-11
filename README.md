@@ -71,12 +71,12 @@ traffic_kdv.compute()
 ```
 Example for supporting the bandwidth-tuning analysis task:<br />
 ```
-bandwidths_NewYork = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set the bandwidths
-result_NewYork = [] #Stores the final results
-kdv_NewYork = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=0,row_pixels=1280,col_pixels=960,bandwidth_t=10,num_threads=16)
-for band in bandwidths_NewYork:
-    kdv_NewYork.bandwidth_s = band
-    result_NewYork.append(kdv_NewYork.compute())
+bandwidths_traffic_kdv = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set the bandwidths
+result_traffic_kdv = [] #Stores the final results
+kdv_traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=0,row_pixels=1280,col_pixels=960,bandwidth_t=10,num_threads=16)
+for band in bandwidths_traffic_kdv:
+    kdv_traffic_kdv.bandwidth_s = band
+    result_traffic_kdv.append(kdv_traffic_kdv.compute())
 ```
 Example for supporting the spatiotemporal analysis task:<br />
 ```
@@ -86,8 +86,22 @@ traffic_kdv.compute()
 ```
 
 3. Illustrate the heatmap by [KerplerGL](https://kepler.gl/)
+
+To generate a single KDV or support the spatiotemporal analysis task, you can use the following code.
 ```
-xxxxxx
+from keplergl import KeplerGl
+map_traffic_kdv = KeplerGl(height=600, data={"data_1": kdv_traffic_kdv.result}, config=config_traffic_kdv)
+map_traffic_kdv
+```
+
+To support the bandwidth-tuning analysis task, you can use the following code.
+```
+from keplergl import KeplerGl
+map_traffic_kdv_bands = KeplerGl(height=500,config=config_traffic_kdv_bands)
+
+for i in range(len(bandwidths_traffic_kdv)):
+    map_traffic_kdv_bands.add_data(data=result_traffic_kdv[i], name='data_%d'%(i+1))
+map_traffic_kdv_bands
 ```
 
 # Advantages:
