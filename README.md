@@ -39,17 +39,50 @@ pip install rtree==0.9.3
 
 # How to Use:
 
-1. Import libkdv in your code
+1. Import LIBKDV in your code
 ```
 import libkdv
 ```
 
-2. Create the libkdv object and compute the heatmap
+2. Create the LIBKDV object and compute the heatmap
 ```
-traffic_kdv = kdv(xx,yy,zz,...)
+traffic_kdv = kdv(dataset,GPS=g,middle_lat=ml,KDV_type=kt,bandwidth_s=bs,bandwidth_t=bt,row_pixels=rp,col_pixels=cp,t_pixels=tp,num_threads=nt)
 traffic_kdv.compute()
 ```
-> *xx: it is ...*
+> *dataset: It is a pandas table object which stores the dataset.*<br />
+*g: It is a boolean value (true/false) which denotes whether we are using the location data (In our demo, g=True)*<br />
+*ml: It is a reference latitude (We can set it to be the latitude of the center point of the region). We need to set this variable if g=True.*<br />
+*kt: It is a kernel type.*<br /> 
+*kt=1 means that you call a single KDV (Users can write the for loop to support bandwidth tuning analysis).*<br />
+*kt=3 means that you call the spatiotemporal analysis.*
+*bs: It is a spatial bandwidth (in terms of meters).*<br />
+*bt: It is a temporal bandwidth (in terms of days). We need to set this variable if kt=3.*<br />
+*rp: It is a number of grids in the x-axis.*<br />
+*cp: It is a number of grids in the y-axis.*<br />
+*tp: It is a number of grids in the t-axis.*<br />
+*num_threads: It is a number of threads.*<br />
+
+Example for computing a single KDV:<br />
+```
+NewYork = pd.read_csv('./Datasets/New_York.csv')
+traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=1000,row_pixels=128,col_pixels=128,num_threads=16)
+traffic_kdv.compute()
+```
+Example for supporting the bandwidth-tuning analysis task:<br />
+```
+bandwidths_NewYork = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set the bandwidths
+result_NewYork = [] #Stores the final results
+kdv_NewYork = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=0,row_pixels=1280,col_pixels=960,bandwidth_t=10,num_threads=16)
+for band in bandwidths_NewYork:
+    kdv_NewYork.bandwidth_s = band
+    result_NewYork.append(kdv_NewYork.compute())
+```
+Example for supporting the spatiotemporal analysis task:<br />
+```
+NewYork = pd.read_csv('./Datasets/New_York.csv')
+traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=1000,row_pixels=128,col_pixels=128,num_threads=16)
+traffic_kdv.compute()
+```
 
 3. Illustrate the heatmap by [KerplerGL](https://kepler.gl/)
 ```
