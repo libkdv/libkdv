@@ -117,7 +117,8 @@ There are three main advantages for using our LIBKDV.<br />
 ***High efficiency:*** LIBKDV is the first library that can reduce the worst-case time complexity for generating KDV, which cannot be achieved by other software tools. Therefore, instead of calling the KDV function in other python packages (Scikit-learn and Scipy), domain experts can call our efficient KDV function in LIBKDV.<br />
 ***High versatility:*** Due to the high efficiency of LIBKDV, our library can support more KDV-based geospatial analysis tasks, including bandwidth-tuning analysis and spatiotemporal analysis, which cannot be natively and feasibly supported by other software tools.<br />
 
-LIBKDV is superior to those KDV solutions in scientific library, scikit-learn and scipy, in terms of response time and functionality, espeically for high resolution (1k monitor) and large data cardinality (millions objects). As shown in our jupyter notebook example, LIBKDV is XX times faster than scipy and yyy times faster than scikit-learn on our testing workstation.
+<!--Add Practical Performance -->
+<!-- LIBKDV is superior to those KDV solutions in scientific library, scikit-learn and scipy, in terms of response time and functionality, espeically for high resolution (1k monitor) and large data cardinality (millions objects). As shown in our jupyter notebook example, LIBKDV is XX times faster than scipy and yyy times faster than scikit-learn on our testing workstation.-->
 
 
 # Project Members:
