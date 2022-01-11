@@ -28,8 +28,7 @@ conda activate py39
 ```
 3. Install the dependencies in the environment
 ```
-conda install -c conda-forge geopandas
-pip install keplergl
+conda install -c conda-forge geopandas keplergl
 pip install libkdv
 ```
 4. Try to import libkdv
@@ -54,7 +53,7 @@ pip install rtree==0.9.3
 Mr. Pak Lon Ip, Universiy of Macau<br />
 Mr. Kaiyan Zhao, Universiy of Macau<br />
 [Prof. (Ryan) Leong Hou U](https://www.fst.um.edu.mo/personal/ryanlhu/), Universiy of Macau<br />
-[Dr. Byron Choi](https://www.comp.hkbu.edu.hk/~bchoi/), Hong Kong Baptist University<br />
+[Prof. Byron Choi](https://www.comp.hkbu.edu.hk/~bchoi/), Hong Kong Baptist University<br />
 [Prof. Jianliang Xu](https://www.comp.hkbu.edu.hk/~xujl/), Hong Kong Baptist University<br />
 
 # Publications:
