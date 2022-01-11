@@ -71,9 +71,6 @@ Mr. Kaiyan Zhao, Universiy of Macau<br />
 # Collaborators:
 [Prof. Reynold Cheng](https://i.cs.hku.hk/~ckcheng/), The University of Hong Kong<br />
 [Prof. (Ken) Man Lung Yiu](https://www4.comp.polyu.edu.hk/~csmlyiu/), Hong Kong Polytechnic University<br />
-Mr. Weng Hou Tong, Universiy of Macau<br />
-Mr. Shivansh Mittal, The University of Hong Kong<br />
-Mr. Ye Li, Universiy of Macau<br />
 
 # Publications:
 1. Tsz Nam Chan, Leong Hou U, Byron Choi, Jianliang Xu. SLAM: Efficient Sweep Line Algorithms for Kernel Density Visualization. Proceedings of ACM Conference on Management of Data (SIGMOD), 2022.
