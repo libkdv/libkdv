@@ -90,14 +90,14 @@ traffic_kdv.compute()
 To generate a single KDV or support the spatiotemporal analysis task, you can use the following code.
 ```
 from keplergl import KeplerGl
-map_traffic_kdv = KeplerGl(height=600, data={"data_1": kdv_traffic_kdv.result}, config=config_traffic_kdv)
+map_traffic_kdv = KeplerGl(height=600, data={"data_1": kdv_traffic_kdv.result})
 map_traffic_kdv
 ```
 
 To support the bandwidth-tuning analysis task, you can use the following code.
 ```
 from keplergl import KeplerGl
-map_traffic_kdv_bands = KeplerGl(height=500,config=config_traffic_kdv_bands)
+map_traffic_kdv_bands = KeplerGl(height=500)
 
 for i in range(len(bandwidths_traffic_kdv)):
     map_traffic_kdv_bands.add_data(data=result_traffic_kdv[i], name='data_%d'%(i+1))
