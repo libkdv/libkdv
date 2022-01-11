@@ -60,7 +60,7 @@ traffic_kdv.compute()
 *bt: It is a temporal bandwidth (in terms of days). You need to set this variable if kt=3.*<br />
 *rp: It is a number of grids in the x-axis.*<br />
 *cp: It is a number of grids in the y-axis.*<br />
-*tp: It is a number of grids in the t-axis.*<br />
+*tp: It is a number of grids in the t-axis. You need to set this variable if kt=3.*<br />
 *num_threads: It is a number of threads.*<br />
 
 Example for computing a single KDV:<br />
