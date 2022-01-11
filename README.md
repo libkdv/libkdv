@@ -18,7 +18,7 @@ To further enhance the efficiency for these two tasks, we fully parallelize our 
 
 # Installation Guidelines:
 
-1. First, build the virtual environment in the Annaconda (recommended Python 3.9)
+1. First, build the virtual environment in the Anaconda (recommended Python 3.9)
 ```
 conda create -n libkdv python=3.9
 ```
@@ -44,7 +44,10 @@ pip install rtree==0.9.3
 import libkdv
 ```
 
-<!-- # Core source codes-->
+2. Create the libkdv object
+```
+xxxxxx
+```
 
 
 # Project Members:
