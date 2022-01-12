@@ -55,7 +55,7 @@ traffic_kdv = kdv(dataset, KDV_type="KDV",
 traffic_kdv.compute()
 ```
 > dataset: **Pandas object**, *the dataset.*<br />
-> KDV_type: **String**, **KDV** *- single KDV* or STKDV *- Spatio-Temporal KDV*.*<br />
+> KDV_type: **String**, **KDV** *- single KDV* or STKDV *- Spatio-Temporal KDV.*<br />
 > GPS: **Boolean**, **true** *- use longitude and latitude* or false *- use transformed X and Y (refer to data_processing.ipynb).*<br />
 > middle_lat: **Float**, *the latitude of the center point of the region. You need to set this variable if **GPS=True**.*<br />
 > bandwidth_s: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
