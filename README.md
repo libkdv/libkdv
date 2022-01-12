@@ -61,8 +61,8 @@ traffic_kdv.compute()
 > bandwidth_s: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
 > row_pixels: **Integer**, *the number of grids in the x-axis, default is **800**.*<br />
 > col_pixels: **Integer**, *the number of grids in the y-axis, default is **640**.*<br />
-> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days), default is **6**. **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
-> t_pixels: **Integer**, *the number of grids in the t-axis, default is **32**. **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
+> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days), default is **6**. **REQUIRED** if KDV_type="STKDV".*<br />
+> t_pixels: **Integer**, *the number of grids in the t-axis, default is **32**. **REQUIRED** if KDV_type="STKDV".*<br />
 > num_threads: **Integer**, *the number of threads, default is **8**.*<br />
 
 Example for computing a single KDV:<br />
