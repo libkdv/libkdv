@@ -66,14 +66,14 @@ traffic_kdv.compute()
 Example for computing a single KDV:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
-traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=1000)
+traffic_kdv = kdv(NewYork,KDV_type=1,bandwidth_s=1000)
 traffic_kdv.compute()
 ```
 Example for supporting the bandwidth-tuning analysis task:<br />
 ```
 bandwidths_traffic_kdv = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set the bandwidths
 result_traffic_kdv = [] #Stores the final results
-kdv_traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1)
+kdv_traffic_kdv = kdv(NewYork,KDV_type=1)
 for band in bandwidths_traffic_kdv:
     kdv_traffic_kdv.bandwidth_s = band
     result_traffic_kdv.append(kdv_traffic_kdv.compute())
@@ -81,7 +81,7 @@ for band in bandwidths_traffic_kdv:
 Example for supporting the spatiotemporal analysis task:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
-traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=3,bandwidth_s=1000,bandwidth_t=10)
+traffic_kdv = kdv(NewYork,KDV_type=3,bandwidth_s=1000,bandwidth_t=10)
 traffic_kdv.compute()
 ```
 
