@@ -47,21 +47,23 @@ import pandas as pd
 
 2. Create the LIBKDV object and compute the heatmap
 ```
-traffic_kdv = kdv(dataset,GPS=g,middle_lat=ml,KDV_type=kt,bandwidth_s=bs,bandwidth_t=bt,row_pixels=rp,col_pixels=cp,t_pixels=tp,num_threads=nt)
+traffic_kdv = kdv(dataset, KDV_type=1,
+                  GPS, middle_lat, 
+                  bandwidth_s, bandwidth_t,
+                  row_pixels=1024, col_pixels=768, t_pixels=100, 
+                  num_threads=16)
 traffic_kdv.compute()
 ```
-> *dataset: It is a pandas table object which stores the dataset.*<br />
-> *g: It is a boolean variable. If g is True, you use the location data (Each row stores the longitude, latitude and time (optional)).*<br />
-*ml: It is a reference latitude (You can set it to be the latitude of the center point of the region). You need to set this variable if g=True.*<br />
-*kt: It is a kernel type.*<br /> 
-*kt=1 means that you call a single KDV (Users can write the for loop to support bandwidth tuning analysis).*<br />
-*kt=3 means that you call the spatiotemporal analysis.*<br />
-*bs: It is a spatial bandwidth (in terms of meters).*<br />
-*bt: It is a temporal bandwidth (in terms of days). You need to set this variable if kt=3.*<br />
-*rp: It is a number of grids in the x-axis.*<br />
-*cp: It is a number of grids in the y-axis.*<br />
-*tp: It is a number of grids in the t-axis. You need to set this variable if kt=3.*<br />
-*num_threads: It is a number of threads.*<br />
+> dataset: **Pandas object**, *the dataset.*<br />
+> KDV_type: **Integer**, **1** *for a single KDV*; 3: *for a spatiotemporal analysis*.*<br />
+> GPS: **Boolean**, * **true**: use longitude and latitude; false: use transformed X and Y. (refer to data_processing.ipynb) *<br />
+> middle_lat: **Float**, the latitude of the center point of the region. You need to set this variable if **GPS=True**.*<br />
+> *bandwidth_s: **Float**, the spatial bandwidth (in terms of meters).*<br />
+> *bandwidth_t: **Float**, the temporal bandwidth (in terms of days). You need to set this variable if **kt=3**.*<br />
+> *row_pixels: **Integer**, the number of grids in the x-axis, default is **1024**.*<br />
+> *col_pixels: **Integer**, the number of grids in the y-axis, default is **1024**.*<br />
+> *t_pixels: **Integer**, the number of grids in the t-axis, default is **100**.. You need to set this variable if **kt=3**.*<br />
+> *num_threads: **Integer**, the number of threads, default is **16**.*<br />
 
 Example for computing a single KDV:<br />
 ```
