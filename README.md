@@ -49,21 +49,21 @@ import pandas as pd
 ```
 traffic_kdv = kdv(dataset, KDV_type=1,
                   GPS, middle_lat, 
-                  bandwidth_s, row_pixels=1024, col_pixels=768, 
-                  bandwidth_t, t_pixels=100,
-                  num_threads=16)
+                  bandwidth_s=1000, row_pixels=800, col_pixels=640, 
+                  bandwidth_t=6, t_pixels=32,
+                  num_threads=8)
 traffic_kdv.compute()
 ```
 > dataset: **Pandas object**, *the dataset.*<br />
 > KDV_type: **Integer**, **1** *- single KDV* or 3: *- spatiotemporal analysis*.*<br />
 > GPS: **Boolean**, **true** *- use longitude and latitude* or false *- use transformed X and Y (refer to data_processing.ipynb).*<br />
 > middle_lat: **Float**, *the latitude of the center point of the region. You need to set this variable if **GPS=True**.*<br />
-> bandwidth_s: **Float**, *the spatial bandwidth (in terms of meters).*<br />
-> row_pixels: **Integer**, *the number of grids in the x-axis, default is **1024**.*<br />
-> col_pixels: **Integer**, *the number of grids in the y-axis, default is **1024**.*<br />
-> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days). **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
-> t_pixels: **Integer**, *the number of grids in the t-axis, default is **100**. **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
-> num_threads: **Integer**, *the number of threads, default is **16**.*<br />
+> bandwidth_s: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
+> row_pixels: **Integer**, *the number of grids in the x-axis, default is **800**.*<br />
+> col_pixels: **Integer**, *the number of grids in the y-axis, default is **640**.*<br />
+> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days), default is **6**. **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
+> t_pixels: **Integer**, *the number of grids in the t-axis, default is **32**. **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
+> num_threads: **Integer**, *the number of threads, default is **8**.*<br />
 
 Example for computing a single KDV:<br />
 ```
