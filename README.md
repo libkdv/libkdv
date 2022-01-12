@@ -47,12 +47,11 @@ import pandas as pd
 
 2. Create the LIBKDV object and compute the heatmap
 ```
-traffic_kdv = kdv(dataset,GPS=g,middle_lat=ml,KDV_type=kt,bandwidth_s=bs,bandwidth_t=bt,row_pixels=rp,col_pixels=cp,t_pixels=tp,num_threads=nt)
+traffic_kdv = kdv(dataset,GPS=True,middle_lat=ml,KDV_type=kt,bandwidth_s=bs,bandwidth_t=bt,row_pixels=rp,col_pixels=cp,t_pixels=tp,num_threads=nt)
 traffic_kdv.compute()
 ```
 > *dataset: It is a pandas table object which stores the dataset.*<br />
-*g: It is a boolean value (true/false) which denotes whether you are using the location data (In our demo, g=True)*<br />
-*ml: It is a reference latitude (You can set it to be the latitude of the center point of the region). You need to set this variable if g=True.*<br />
+*ml: It is a reference latitude (You can set it to be the latitude of the center point of the region).*<br />
 *kt: It is a kernel type.*<br /> 
 *kt=1 means that you call a single KDV (Users can write the for loop to support bandwidth tuning analysis).*<br />
 *kt=3 means that you call the spatiotemporal analysis.*<br />
