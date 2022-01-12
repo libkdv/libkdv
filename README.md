@@ -49,20 +49,20 @@ import pandas as pd
 ```
 traffic_kdv = kdv(dataset, KDV_type=1,
                   GPS, middle_lat, 
-                  bandwidth_s, bandwidth_t,
-                  row_pixels=1024, col_pixels=768, t_pixels=100, 
+                  bandwidth_s, row_pixels=1024, col_pixels=768, 
+                  bandwidth_t, t_pixels=100,
                   num_threads=16)
 traffic_kdv.compute()
 ```
 > dataset: **Pandas object**, *the dataset.*<br />
-> KDV_type: **Integer**, **1** *for a single KDV*; 3: *for a spatiotemporal analysis*.*<br />
-> GPS: **Boolean**, * **true**: *use longitude and latitude; false: use transformed X and Y (refer to data_processing.ipynb). *<br />
+> KDV_type: **Integer**, **1** *- single KDV* or 3: *- spatiotemporal analysis*.*<br />
+> GPS: **Boolean**, **true** *- use longitude and latitude* or false *- use transformed X and Y (refer to data_processing.ipynb).*<br />
 > middle_lat: **Float**, *the latitude of the center point of the region. You need to set this variable if **GPS=True**.*<br />
 > bandwidth_s: **Float**, *the spatial bandwidth (in terms of meters).*<br />
-> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days). You need to set this variable if **kt=3**.*<br />
 > row_pixels: **Integer**, *the number of grids in the x-axis, default is **1024**.*<br />
 > col_pixels: **Integer**, *the number of grids in the y-axis, default is **1024**.*<br />
-> t_pixels: **Integer**, *the number of grids in the t-axis, default is **100**.. You need to set this variable if **kt=3**.*<br />
+> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days). **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
+> t_pixels: **Integer**, *the number of grids in the t-axis, default is **100**. **REQUIRED** if you are running spatiotemporal analysis **kt=3**.*<br />
 > num_threads: **Integer**, *the number of threads, default is **16**.*<br />
 
 Example for computing a single KDV:<br />
