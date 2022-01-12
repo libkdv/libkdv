@@ -47,11 +47,12 @@ import pandas as pd
 
 2. Create the LIBKDV object and compute the heatmap
 ```
-traffic_kdv = kdv(dataset,GPS=True,middle_lat=ml,KDV_type=kt,bandwidth_s=bs,bandwidth_t=bt,row_pixels=rp,col_pixels=cp,t_pixels=tp,num_threads=nt)
+traffic_kdv = kdv(dataset,GPS=g,middle_lat=ml,KDV_type=kt,bandwidth_s=bs,bandwidth_t=bt,row_pixels=rp,col_pixels=cp,t_pixels=tp,num_threads=nt)
 traffic_kdv.compute()
 ```
 > *dataset: It is a pandas table object which stores the dataset.*<br />
-*ml: It is a reference latitude (You can set it to be the latitude of the center point of the region).*<br />
+> *g: It is a boolean variable. If g is True, you use the location data (Each row stores the longitude, latitude and time (optional)).*<br />
+*ml: It is a reference latitude (You can set it to be the latitude of the center point of the region). You need to set this variable if g=True.*<br />
 *kt: It is a kernel type.*<br /> 
 *kt=1 means that you call a single KDV (Users can write the for loop to support bandwidth tuning analysis).*<br />
 *kt=3 means that you call the spatiotemporal analysis.*<br />
@@ -65,14 +66,14 @@ traffic_kdv.compute()
 Example for computing a single KDV:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
-traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=1000,row_pixels=128,col_pixels=128,num_threads=16)
+traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=1000)
 traffic_kdv.compute()
 ```
 Example for supporting the bandwidth-tuning analysis task:<br />
 ```
 bandwidths_traffic_kdv = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set the bandwidths
 result_traffic_kdv = [] #Stores the final results
-kdv_traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1,bandwidth_s=0,row_pixels=1280,col_pixels=960,num_threads=16)
+kdv_traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=1)
 for band in bandwidths_traffic_kdv:
     kdv_traffic_kdv.bandwidth_s = band
     result_traffic_kdv.append(kdv_traffic_kdv.compute())
@@ -80,7 +81,7 @@ for band in bandwidths_traffic_kdv:
 Example for supporting the spatiotemporal analysis task:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
-traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=3,bandwidth_s=1000,row_pixels=128,col_pixels=128,t_pixels=128,bandwidth_t=10,num_threads=16)
+traffic_kdv = kdv(NewYork,GPS=True,middle_lat=40.730610,KDV_type=3,bandwidth_s=1000,bandwidth_t=10)
 traffic_kdv.compute()
 ```
 
