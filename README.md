@@ -56,7 +56,7 @@ libkdv_obj.compute()
 ```
 Required arguments
 > dataset: **Pandas object**, *the dataset.*<br />
-> KDV_type: **String**, KDV *- single KDV* or STKDV *- Spatio-Temporal KDV.*<br />
+> KDV_type: **String**, "KDV" *- single KDV* or "STKDV" *- Spatio-Temporal KDV.*<br />
 
 Optional arguments
 > GPS: **Boolean**, **true** *- use geographic coordinate system * or false *- use transformed X and Y (evaluation.ipynb).*<br />
