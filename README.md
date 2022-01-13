@@ -37,7 +37,7 @@ pip install libkdv
 pip install rtree==0.9.3
 ```
 
-# How to Use:
+# How to Use (For Win64 and Linux, we are working on MacOS version):
 
 1. Import LIBKDV and Pandas in your code
 ```
