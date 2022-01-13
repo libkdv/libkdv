@@ -59,7 +59,7 @@ Required arguments
 > KDV_type: **String**, "KDV" *- single KDV* or "STKDV" *- Spatio-Temporal KDV.*<br />
 
 Optional arguments
-> GPS: **Boolean**, **true** *- use geographic coordinate system * or false *- use transformed X and Y (evaluation.ipynb).*<br />
+> GPS: **Boolean**, **true** *- use geographic coordinate system * or false *- use simple (X, Y) coordinates (evaluation.ipynb).*<br />
 > bandwidth_s: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
 > row_pixels: **Integer**, *the number of grids in the x-axis, default is **800**.*<br />
 > col_pixels: **Integer**, *the number of grids in the y-axis, default is **640**.*<br />
