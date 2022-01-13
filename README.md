@@ -17,6 +17,7 @@ To further enhance the efficiency for these two tasks, we fully parallelize our 
 <!-- <img width="849" alt="03e58de5950a5d503b73952e8a3bbd1" src="https://user-images.githubusercontent.com/96175669/146165826-eef5f116-3e37-4bec-91dc-899af61fed18.png">-->
 
 # Installation Guidelines:
+## (for Win64 and Linux only; MacOS TBA)
 
 1. First, build the virtual environment in the Anaconda (recommended Python 3.9)
 ```
@@ -37,7 +38,7 @@ pip install libkdv
 pip install rtree==0.9.3
 ```
 
-# How to Use (For Win64 and Linux, we are working on MacOS version):
+# How to Use:
 
 1. Import LIBKDV and Pandas in your code
 ```
