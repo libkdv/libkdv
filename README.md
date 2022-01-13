@@ -47,12 +47,12 @@ import pandas as pd
 
 2. Create the LIBKDV object and compute the heatmap
 ```
-traffic_kdv = kdv(dataset, KDV_type="KDV",
+libkdv_obj = kdv(dataset, KDV_type="KDV",
                   GPS, middle_lat, 
                   bandwidth_s=1000, row_pixels=800, col_pixels=640, 
                   bandwidth_t=6, t_pixels=32,
                   num_threads=8)
-traffic_kdv.compute()
+libkdv_obj.compute()
 ```
 Required arguments
 > dataset: **Pandas object**, *the dataset.*<br />
