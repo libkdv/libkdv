@@ -47,16 +47,16 @@ import pandas as pd
 
 2. Create the LIBKDV object and compute the heatmap
 ```
-libkdv_obj = kdv(dataset, KDV_type="KDV",
-                  GPS=true, 
-                  bandwidth_s=1000, row_pixels=800, col_pixels=640, 
-                  bandwidth_t=6, t_pixels=32,
-                  num_threads=8)
+libkdv_obj = kdv(dataset, KDV_type,
+                 GPS=true, 
+                 bandwidth_s=1000, row_pixels=800, col_pixels=640, 
+                 bandwidth_t=6, t_pixels=32,
+                 num_threads=8)
 libkdv_obj.compute()
 ```
 Required arguments
 > dataset: **Pandas object**, *the dataset.*<br />
-> KDV_type: **String**, **KDV** *- single KDV* or STKDV *- Spatio-Temporal KDV.*<br />
+> KDV_type: **String**, KDV *- single KDV* or STKDV *- Spatio-Temporal KDV.*<br />
 
 Optional arguments
 > GPS: **Boolean**, **true** *- use geographic coordinate system * or false *- use transformed X and Y (evaluation.ipynb).*<br />
