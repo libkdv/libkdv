@@ -78,10 +78,10 @@ Example for supporting the bandwidth-tuning analysis task:<br />
 ```
 bandwidths_traffic_kdv = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set the bandwidths
 result_traffic_kdv = [] #Stores the final results
-kdv_traffic_kdv = kdv(NewYork,KDV_type=1)
+traffic_kdv = kdv(NewYork,KDV_type=1)
 for band in bandwidths_traffic_kdv:
     kdv_traffic_kdv.bandwidth_s = band
-    result_traffic_kdv.append(kdv_traffic_kdv.compute())
+    result_traffic_kdv.append(traffic_kdv.compute())
 ```
 Example for supporting the spatiotemporal analysis task:<br />
 ```
@@ -95,7 +95,7 @@ traffic_kdv.compute()
 To generate a single KDV or support the spatiotemporal analysis task, you can use the following code.
 ```
 from keplergl import KeplerGl
-map_traffic_kdv = KeplerGl(height=600, data={"data_1": kdv_traffic_kdv.result})
+map_traffic_kdv = KeplerGl(height=600, data={"data_1": traffic_kdv.result})
 map_traffic_kdv
 ```
 
