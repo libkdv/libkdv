@@ -55,7 +55,7 @@ libkdv_obj = kdv(dataset, KDV_type,
 libkdv_obj.compute()
 ```
 Required arguments
-> dataset: **Pandas object**, *the dataset.*<br />
+> dataset: **Pandas object**, *the dataset.* (for preparation, please refer to the steps in data_processing.ipynb)<br />
 > KDV_type: **String**, "KDV" *- single KDV* or "STKDV" *- Spatio-Temporal KDV.*<br />
 
 Optional arguments
