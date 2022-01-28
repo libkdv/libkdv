@@ -115,7 +115,7 @@ We offer four sample datasets for testing, which are (1) Seattle crime dataset [
 [a] Seattle Open Data. https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5. <br />
 [b] NYC Open Data. https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95. <br />
 [c] Ontario Open Data. https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario. <br />
-[d] Hainan Sanya taxi dataset. https://github.com/libkdv/libkdv/blob/main/hainan-sanya-taxi.csv. <br />
+[d] Hainan Sanya taxi Data. https://github.com/libkdv/libkdv/blob/main/hainan-sanya-taxi.csv. <br />
 
 # Advantages:
 There are three main advantages for using our LIBKDV.<br />
