@@ -110,7 +110,7 @@ map_traffic_kdv_bands
 ```
 
 # Sample datasets:
-We offer four sample datasets for testing, which are (1) Seattle crime dataset [a], (2) New York traffic accident dataset [b], (3) Ontario COVID-19 dataset [c]，and (4) China Hainan Sanya taxi dataset [d]. The python code (data_processing.py) and the Jupyter notebook (data_processing.ipynb) for extracting these datasets are provided in this Github link.
+We offer four sample datasets for testing, which are (1) Seattle crime dataset [a], (2) New York traffic accident dataset [b], (3) Ontario COVID-19 dataset [c], and (4) China Hainan Sanya taxi dataset [d]. The python code (data_processing.py) and the Jupyter notebook (data_processing.ipynb) for extracting these datasets are provided in this Github link.
 
 [a] Seattle Open Data. https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5. <br />
 [b] NYC Open Data. https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95. <br />
