@@ -121,7 +121,13 @@ We offer five sample datasets for testing, which are (1) Atlanta crime dataset [
 # Advantages:
 There are three main advantages for using our LIBKDV.<br />
 ***Easy-to-use software package:*** Domain experts only need to write a few lines of python codes for using our LIBKDV, which is as easy as using other python packages, including Scikit-learn and Scipy.<br />
-***High efficiency:*** LIBKDV is the first library that can reduce the worst-case time complexity for generating KDV, which cannot be achieved by other software tools. In practice, LIBKDV can also significantly improve the efficiency for generating KDV compared with other python packages (cf. Figure 3). Therefore, instead of calling the KDV function in other python packages, domain experts can call our efficient KDV function in LIBKDV.<br />
+***High efficiency:*** LIBKDV is the first library that can reduce the worst-case time complexity for generating KDV, which cannot be achieved by other software tools. Here, we also conduct the experiment in the Seattle crime dataset for comparing the efficiency of different python packages to generate KDV. In this experiment, we fix the resolution size to be 1280 x 960 and sample this dataset with different percentages. Observe from Figure 3 that all the existing libraries, including Scipy, Scikit-learn, and Statsmodels, take at least 100 seconds for generating a single KDV even we sample only 1% of data points in this dataset. Compared with these packages, LIBKDV only takes less than 10 seconds, which is more scalable, for generating KDV. Therefore, instead of calling the KDV function in other python packages, domain experts can call our efficient KDV function in LIBKDV.<br />
+
+<p align="center">
+    <img width="349" src="Efficiency_Performance.png"><br />
+    Figure 5: Response time of different python libraries for generating KDV in the Seattle dataset, varying the dataset size.
+</p>
+
 ***High versatility:*** Due to the high efficiency of LIBKDV, our library can support more KDV-based geospatial analysis tasks, including bandwidth-tuning analysis (cf. Figure 4) and spatiotemporal analysis (cf. Figure 5), which cannot be natively and feasibly supported by other software tools.<br />
 
 <p align="center">
