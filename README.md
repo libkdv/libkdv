@@ -10,7 +10,7 @@ To overcome the above issue, we develop the first versatile programming library 
 
 (2)	Spatiotemporal analysis (cf. Figure 2): Domain experts can leverage a more complex spatiotemporal kernel density function to generate time-dependent hotspot maps that correspond to different timestamps.
 
-<p align="center"><img width="849" alt="03e58de5950a5d503b73952e8a3bbd1" src="STKDV_Hong_Kong_v3.png"></p>
+<p align="center"><img width="849" alt="03e58de5950a5d503b73952e8a3bbd1" src="STKDV_Hong_Kong_v4.png"></p>
 
 To further enhance the efficiency for these two tasks, we fully parallelize our methods, SLAM and SWS.
 
