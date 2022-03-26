@@ -144,7 +144,7 @@ There are three main advantages for using our LIBKDV.<br />
 <!-- LIBKDV is superior to those KDV solutions in scientific library, scikit-learn and scipy, in terms of response time and functionality, espeically for high resolution (1k monitor) and large data cardinality (millions objects). As shown in our jupyter notebook example, LIBKDV is XX times faster than scipy and yyy times faster than scikit-learn on our testing workstation.-->
 
 # Example Jupyter Notebooks for Calling LIBKDV:
-In this Github link, we also provide three Jupyter notebooks, namely [Demo_single_KDV.ipynb](Demo_single_KDV.ipynb), [Demo_KDV_bandwidth.ipynb](Demo_KDV_bandwidth.ipynb), and [Demo_STKDV.ipynb](Demo_STKDV.ipynb), which can support generating a single KDV, bandwidth-tuning analysis, and spatiotemporal analysis, respectively. Interested users can download these Jupyter Notebooks for testing our library.
+In this Github link, we also provide three Jupyter notebooks, namely [Demo_single_KDV.ipynb](Demo_single_KDV.ipynb), [Demo_KDV_bandwidth.ipynb](Demo_KDV_bandwidth.ipynb), and [Demo_STKDV.ipynb](Demo_STKDV.ipynb), which can support generating a single KDV, bandwidth-tuning analysis, and spatiotemporal analysis, respectively. Interested users can download these Jupyter Notebooks for testing our library. Please also refer to the [demonstration video](https://www.comp.hkbu.edu.hk/~edisonchan/system/Video/LIBKDV_Video_final.mp4).
 
 # Project Members:
 [Prof. (Edison) Tsz Nam Chan](https://www.comp.hkbu.edu.hk/~edisonchan/), Hong Kong Baptist University<br />
