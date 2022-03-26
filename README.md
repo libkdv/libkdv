@@ -110,12 +110,13 @@ map_traffic_kdv_bands
 ```
 
 # Sample datasets:
-We offer four sample datasets for testing, which are (1) Seattle crime dataset [a], (2) New York traffic accident dataset [b], (3) Ontario COVID-19 dataset [c], and (4) China Hainan Sanya taxi dataset [d]. The python code (data_processing.py) and the Jupyter notebook (data_processing.ipynb) for extracting these datasets are provided in this Github link.
+We offer five sample datasets for testing, which are (1) Atlanta crime dataset [a], (2) Seattle crime dataset [b], (3) New York traffic accident dataset [c], (4) Hong Kong COVID-19 dataset [d], and (5) China Hainan Sanya taxi dataset [e]. The python code (data_processing.py) and the Jupyter notebook (data_processing.ipynb) for extracting these datasets are provided in this Github link.
 
-[a] Seattle Open Data. https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5. <br />
-[b] NYC Open Data. https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95. <br />
-[c] Ontario Open Data. https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario. <br />
-[d] Hainan Sanya taxi Data. https://github.com/libkdv/libkdv/blob/main/hainan-sanya-taxi.csv. <br />
+[a] Atlanta Open Data. http://opendata.atlantapd.org/. <br />
+[b] Seattle Open Data. https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5. <br />
+[c] NYC Open Data. https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95. <br />
+[d] Hong Kong Open Data. https://geodata.gov.hk/gs/view-dataset?uuid=d4ccd9be-3bc0-449b-bd27-9eb9b615f2db&sidx=0. <br />
+[e] Hainan Sanya taxi Data. https://github.com/libkdv/libkdv/blob/main/hainan-sanya-taxi.csv. <br />
 
 # Advantages:
 There are three main advantages for using our LIBKDV.<br />
