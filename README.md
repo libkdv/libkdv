@@ -121,8 +121,18 @@ We offer five sample datasets for testing, which are (1) Atlanta crime dataset [
 # Advantages:
 There are three main advantages for using our LIBKDV.<br />
 ***Easy-to-use software package:*** Domain experts only need to write a few lines of python codes for using our LIBKDV, which is as easy as using other python packages, including Scikit-learn and Scipy.<br />
-***High efficiency:*** LIBKDV is the first library that can reduce the worst-case time complexity for generating KDV, which cannot be achieved by other software tools. Therefore, instead of calling the KDV function in other python packages (Scikit-learn and Scipy), domain experts can call our efficient KDV function in LIBKDV.<br />
-***High versatility:*** Due to the high efficiency of LIBKDV, our library can support more KDV-based geospatial analysis tasks, including bandwidth-tuning analysis and spatiotemporal analysis, which cannot be natively and feasibly supported by other software tools.<br />
+***High efficiency:*** LIBKDV is the first library that can reduce the worst-case time complexity for generating KDV, which cannot be achieved by other software tools. In practice, LIBKDV can also significantly improve the efficiency for generating KDV compared with other python packages (cf. Figure 3). Therefore, instead of calling the KDV function in other python packages, domain experts can call our efficient KDV function in LIBKDV.<br />
+***High versatility:*** Due to the high efficiency of LIBKDV, our library can support more KDV-based geospatial analysis tasks, including bandwidth-tuning analysis (cf. Figure 4) and spatiotemporal analysis (cf. Figure 5), which cannot be natively and feasibly supported by other software tools.<br />
+
+<p align="center">
+    <img width="849" src="Bandwidth_tuning_animation.gif" alt><br />
+    Figure 4: Bandwidth-tuning analysis for the New York traffic accident dataset.
+</p>
+
+<p align="center">
+    <img width="849" src="STKDV_animation.gif"><br />
+    Figure 5: Spatiotemporal analysis for the Hong Kong COVID-19 dataset.
+</p>
 
 <!--Add Practical Performance -->
 <!-- LIBKDV is superior to those KDV solutions in scientific library, scikit-learn and scipy, in terms of response time and functionality, espeically for high resolution (1k monitor) and large data cardinality (millions objects). As shown in our jupyter notebook example, LIBKDV is XX times faster than scipy and yyy times faster than scikit-learn on our testing workstation.-->
