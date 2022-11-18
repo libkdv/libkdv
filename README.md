@@ -6,7 +6,7 @@ Kernel Density Visualization (KDV) has been extensively used for many geospatial
 Macau COVID-19 HotSpot Map: https://degroup.cis.um.edu.mo/covid-19/# <br/>
 Hong Kong COVID-19 HotSpot Map: https://covid19.comp.hkbu.edu.hk/
 
-# How to cite our work:
+# How to Cite Our Work:
 If you use this library and working systems for your research studies, please cite the articles [2] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIZUCX22.html?view=bibtex) and [5] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIUTMLC21.html?view=bibtex).
 
 # Introduction:
