@@ -6,6 +6,9 @@ Kernel Density Visualization (KDV) has been extensively used for many geospatial
 Macau COVID-19 HotSpot Map: https://degroup.cis.um.edu.mo/covid-19/# <br/>
 Hong Kong COVID-19 HotSpot Map: https://covid19.comp.hkbu.edu.hk/
 
+# How to cite our work:
+If you use this library and working systems for your research studies, please cite the articles [2] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIZUCX22.html?view=bibtex) and [5] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIUTMLC21.html?view=bibtex).
+
 # Introduction:
 To overcome the above issue, we develop the first versatile programming library (LIBKDV) [2], by combining our recent studies (SLAM [1] and SWS [3]), which can reduce the worst-case time complexity for supporting different types of KDV-based geospatial analytics, including:
 
