@@ -133,7 +133,7 @@ There are three main advantages for using our LIBKDV.<br />
 
 <p align="center">
     <img width="349" src="Efficiency_Performance.png"><br />
-    Figure 5: Response time of different python libraries for generating KDV in the Seattle dataset, varying the dataset size.
+    Figure 3: Response time of different python libraries for generating KDV in the Seattle dataset, varying the dataset size.
 </p>
 
 ***High versatility:*** Due to the high efficiency of LIBKDV, our library can support more KDV-based geospatial analysis tasks, including bandwidth-tuning analysis (cf. Figure 4) and spatiotemporal analysis (cf. Figure 5), which cannot be natively and feasibly supported by other software tools.<br />
