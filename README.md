@@ -7,7 +7,7 @@ Macau COVID-19 HotSpot Map: https://degroup.cis.um.edu.mo/covid-19/# <br/>
 Hong Kong COVID-19 HotSpot Map: https://covid19.comp.hkbu.edu.hk/
 
 # How to Cite Our Work:
-If you use this library and working systems for your research studies, please cite the articles [2] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIZUCX22.html?view=bibtex) and [5] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIUTMLC21.html?view=bibtex).
+If you use this library and working systems for your research studies, please cite the articles [4] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIZUCX22.html?view=bibtex) and [7] [(bibtex)](https://dblp.org/rec/journals/pvldb/ChanIUTMLC21.html?view=bibtex).
 
 # Introduction:
 To overcome the above issue, we develop the first versatile programming library (LIBKDV) [4], by combining our recent studies (SLAM [3] and SWS [5]), which can reduce the worst-case time complexity for supporting different types of KDV-based geospatial analytics, including:
