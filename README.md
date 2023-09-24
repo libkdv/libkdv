@@ -155,7 +155,7 @@ There are three main advantages for using our LIBKDV.<br />
 In this Github link, we also provide three Jupyter notebooks, namely [Demo_single_KDV.ipynb](Demo_single_KDV.ipynb), [Demo_KDV_bandwidth.ipynb](Demo_KDV_bandwidth.ipynb), and [Demo_STKDV.ipynb](Demo_STKDV.ipynb), which can support generating a single KDV, bandwidth-tuning analysis, and spatiotemporal analysis, respectively. Interested users can download these Jupyter Notebooks for testing our library. Please also refer to the [demonstration video](https://www.comp.hkbu.edu.hk/~edisonchan/system/Video/LIBKDV_Video_final.mp4) for more details.
 
 # Project Members:
-[Prof. (Edison) Tsz Nam Chan](https://www.comp.hkbu.edu.hk/~edisonchan/), Hong Kong Baptist University<br />
+[Prof. (Edison) Tsz Nam Chan](https://edisonchan-szu.github.io/), Shenzhen University<br />
 Mr. Pak Lon Ip, Universiy of Macau<br />
 Mr. Kaiyan Zhao, Universiy of Macau<br />
 [Prof. (Ryan) Leong Hou U](https://www.fst.um.edu.mo/personal/ryanlhu/), Universiy of Macau<br />
