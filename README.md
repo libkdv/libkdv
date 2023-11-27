@@ -58,7 +58,7 @@ import pandas as pd
 ```
 libkdv_obj = kdv(dataset, KDV_type,
                  GPS=true, 
-                 bandwidth_s=1000, row_pixels=800, col_pixels=640, 
+                 bandwidth=1000, row_pixels=800, col_pixels=640, 
                  bandwidth_t=6, t_pixels=32,
                  num_threads=8)
 libkdv_obj.compute()
@@ -69,7 +69,7 @@ Required arguments
 
 Optional arguments
 > GPS: **Boolean**, **true** *- use geographic coordinate system * or false *- use simple (X, Y) coordinates (evaluation.ipynb).*<br />
-> bandwidth_s: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
+> bandwidth: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
 > row_pixels: **Integer**, *the number of grids in the x-axis, default is **800**.*<br />
 > col_pixels: **Integer**, *the number of grids in the y-axis, default is **640**.*<br />
 > bandwidth_t: **Float**, *the temporal bandwidth (in terms of days), default is **6**. **REQUIRED** if KDV_type="STKDV".*<br />
@@ -79,7 +79,7 @@ Optional arguments
 Example for computing a single KDV:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
-traffic_kdv = kdv(NewYork,KDV_type="KDV",bandwidth_s=1000)
+traffic_kdv = kdv(NewYork,KDV_type="KDV",bandwidth=1000)
 traffic_kdv.compute()
 ```
 Example for supporting the bandwidth-tuning analysis task:<br />
@@ -88,13 +88,13 @@ bandwidths_traffic_kdv = [500,700,900,1100,1300,1500,1700,1900,2100,2300] #Set t
 result_traffic_kdv = [] #Stores the final results
 traffic_kdv = kdv(NewYork,KDV_type="KDV")
 for band in bandwidths_traffic_kdv:
-    kdv_traffic_kdv.bandwidth_s = band
+    kdv_traffic_kdv.bandwidth = band
     result_traffic_kdv.append(traffic_kdv.compute())
 ```
 Example for supporting the spatiotemporal analysis task:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
-traffic_kdv = kdv(NewYork,KDV_type="STKDV",bandwidth_s=1000,bandwidth_t=10)
+traffic_kdv = kdv(NewYork,KDV_type="STKDV",bandwidth=1000,bandwidth_t=10)
 traffic_kdv.compute()
 ```
 
