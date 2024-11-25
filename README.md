@@ -37,15 +37,15 @@ conda activate libkdv
 ```
 3. Install the dependencies and the library
 ``` 
-conda install -c conda-forge geopandas
-pip install keplergl==0.3.2 notebook==6.3.0
 pip install libkdv
 ```
-4. Anticipated problem(s) and possible solution(s)
-> *OSError: could not find or load spatialindex_c-64.dll*
+4. Install the dependencies for ploting figure on jupyter notebook(optional)
 ```
-pip install rtree==0.9.3
+conda install -c conda-forge geopandas
+conda install -c conda-forge keplergl==0.3.2
 ```
+
+
 
 # How to Use:
 
@@ -55,33 +55,14 @@ import libkdv
 import pandas as pd
 ```
 
-2. Create the LIBKDV object and compute the heatmap
-```
-libkdv_obj = libkdv.kdv(dataset, KDV_type,
-                 GPS=True, 
-                 bandwidth=1000, row_pixels=800, col_pixels=640, 
-                 bandwidth_t=6, t_pixels=32,
-                 num_threads=8)
-libkdv_obj.compute()
-```
-Required arguments
-> dataset: **Pandas object**, *the dataset.* (for preparation, please refer to the steps in data_processing.ipynb)<br />
-> KDV_type: **String**, "KDV" *- single KDV* or "STKDV" *- Spatio-Temporal KDV.*<br />
-
-Optional arguments
-> GPS: **Boolean**, **true** *- use geographic coordinate system * or false *- use simple (X, Y) coordinates (evaluation.ipynb).*<br />
-> bandwidth: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
-> row_pixels: **Integer**, *the number of grids in the x-axis, default is **800**.*<br />
-> col_pixels: **Integer**, *the number of grids in the y-axis, default is **640**.*<br />
-> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days), default is **6**. **REQUIRED** if KDV_type="STKDV".*<br />
-> t_pixels: **Integer**, *the number of grids in the t-axis, default is **32**. **REQUIRED** if KDV_type="STKDV".*<br />
-> num_threads: **Integer**, *the number of threads, default is **8**.*<br />
+2. Create the LIBKDV object and compute the spatio-Temporal heatmap
 
 Example for computing a single KDV:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
 traffic_kdv = libkdv.kdv(NewYork,KDV_type="KDV",bandwidth=1000)
 traffic_kdv.compute()
+print(traffic_kdv.result)
 ```
 Example for supporting the bandwidth-tuning analysis task:<br />
 ```
@@ -97,11 +78,35 @@ Example for supporting the spatiotemporal analysis task:<br />
 NewYork = pd.read_csv('./Datasets/New_York.csv')
 traffic_kdv = kdv(NewYork,KDV_type="STKDV",bandwidth=1000,bandwidth_t=10)
 traffic_kdv.compute()
+print(traffic_kdv.result)
 ```
 
-3. Show the heatmaps by [KerplerGL](https://kepler.gl/)
+Description of all the parameters
+```
+libkdv_obj = libkdv.kdv(dataset, KDV_type='STKDV',
+                 GPS=True, 
+                 bandwidth=1000, row_pixels=800, col_pixels=640, 
+                 bandwidth_t=6, t_pixels=32,
+                 num_threads=8)
+```
+Required arguments
+> dataset: **Pandas object**, *the dataset.* (for preparation, please refer to the steps in data_processing.ipynb)<br />
+> KDV_type: **String**, "KDV" *- single KDV* or "STKDV" *- Spatio-Temporal KDV.*<br />
 
-To generate a single KDV or support the spatiotemporal analysis task, you can use the following code.
+Optional arguments
+> GPS: **Boolean**, **true** *- use geographic coordinate system * or false *- use simple (X, Y) coordinates (evaluation.ipynb).*<br />
+> bandwidth: **Float**, *the spatial bandwidth (in terms of meters), default is **1000**.*<br />
+> row_pixels: **Integer**, *the number of grids in the x-axis, default is **800**.*<br />
+> col_pixels: **Integer**, *the number of grids in the y-axis, default is **640**.*<br />
+> bandwidth_t: **Float**, *the temporal bandwidth (in terms of days), default is **6**. **REQUIRED** if KDV_type="STKDV".*<br />
+> t_pixels: **Integer**, *the number of grids in the t-axis, default is **32**. **REQUIRED** if KDV_type="STKDV".*<br />
+> num_threads: **Integer**, *the number of threads, default is **8**.*<br />
+
+
+
+3. Show the heatmaps by [KerplerGL](https://kepler.gl/)
+To generate a single KDV figure on notebook or support the spatiotemporal analysis task, you can use the following code.
+Please ensure that the code is written in a Jupyter notebook.
 ```
 from keplergl import KeplerGl
 map_traffic_kdv = KeplerGl(height=600, data={"data_1": traffic_kdv.result})
