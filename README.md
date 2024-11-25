@@ -57,8 +57,8 @@ import pandas as pd
 
 2. Create the LIBKDV object and compute the heatmap
 ```
-libkdv_obj = kdv(dataset, KDV_type,
-                 GPS=true, 
+libkdv_obj = libkdv.kdv(dataset, KDV_type,
+                 GPS=True, 
                  bandwidth=1000, row_pixels=800, col_pixels=640, 
                  bandwidth_t=6, t_pixels=32,
                  num_threads=8)
@@ -80,7 +80,7 @@ Optional arguments
 Example for computing a single KDV:<br />
 ```
 NewYork = pd.read_csv('./Datasets/New_York.csv')
-traffic_kdv = kdv(NewYork,KDV_type="KDV",bandwidth=1000)
+traffic_kdv = libkdv.kdv(NewYork,KDV_type="KDV",bandwidth=1000)
 traffic_kdv.compute()
 ```
 Example for supporting the bandwidth-tuning analysis task:<br />
